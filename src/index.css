@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@custom-variant dark (@media (prefers-color-scheme: dark));
+
+@theme {
+  --font-sans: ui-sans-serif, system-ui, sans-serif;
+  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  color-scheme: light dark;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #e7e5e4;
+  border-radius: 20px;
+}
+@media (prefers-color-scheme: dark) {
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #44403c;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #57534e;
+  }
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #d6d3d1;
+}
